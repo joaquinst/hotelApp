@@ -1,6 +1,6 @@
 var fn = {
     ready: function(){
-        document.addEventListener('deviceready',fn.ready,false);
+        document.addEventListener('deviceready',fn.init,false);
     },
     init: function(){
         $('#regSend').click(fn.enviarRegistro);
