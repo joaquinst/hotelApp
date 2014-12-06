@@ -14,10 +14,18 @@ var fn = {
         var nom = $('#regNom').val();
         var tel = $('#regTel').val();
         var mail = $('#regMail').val();
-        if(nom !='' && tel !='' && mail !='' ){
-            navigator.notification.alert('Correcto',null,'Felicidades','Aceptar');
+        var foto = $('#regFoto').attr('rel');
+        if(nom !='' && tel !='' && mail !='' && foto!='' && foto != undefined){
+            $.ajax({
+                type: "POST",
+                url: "http://carlos.igitsoft.com/apps/test.php",
+                data: { nom: nom, mail: mail, tel: tel}
+            })
+            .done(function( msg ) {
+                alert( "Data Saved: " + msg );
+            });
         }else{
-            alert('Todos los campos son requeridos');        
+            navigator.notification.alert('Todos los campos son requeridos',null,'Lo sentimos','Aceptar');      
         }
     }
 };
