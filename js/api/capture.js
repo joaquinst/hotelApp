@@ -3,7 +3,7 @@ var capture = {
         var image = '';
         for(i = 0; i < imgs.length;i++)
             image = imgs[i].fullPath;
-        $('#regFoto')Attr('rel',image);
+        $('#regFoto').attr('rel',image);
     },
     imgError: function(err){
         navigator.notification.alert('Error: '+err.code,null,'lo sentimos','aceptar');        

@@ -11,7 +11,7 @@ var fn = {
         }
     },
     enviarRegistro: function(){
-        var nom = $('#regNom').val(); // val('asigna') // $('#regNom').val().val('asigna')
+        var nom = $('#regNom').val();
         var tel = $('#regTel').val();
         var mail = $('#regMail').val();
         if(nom !='' && tel !='' && mail !='' ){
