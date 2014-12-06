@@ -1,139 +1,150 @@
 <!DOCTYPE html> 
 <html>
-<head>
-    <meta charset="utf-8">
-	<title>HotelApp</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
-	<script src="js/jquery-1.11.1.min.js"></script>
-	<script src="js/jquery.mobile-1.4.5.min.js"></script>
-</head>
-
-<body>
-    
-<div data-role="page" id="home">
-	<div data-role="header">
-        <h1>Hotel APP</h1>
-    </div>
-	<div role="main" class="ui-content">
-        <ul data-role="listview" data-inset="true">
-            <li><a href="#nr1">Nueva Reserva</a></li>
-            <li><a href="#hst">Historias</a></li>
-            <li><a href="#priv">Privacidad</a></li>
-        </ul>
-    </div>
-	<div data-role="footer" data-position="fixed">
-        <span style="font-size:8pt">
-            &nbsp;&nbsp;&nbsp;&copy;Todos los derechos Reservados 
-        </span>
-        &nbsp;&nbsp;&nbsp;
-        <a href="#nosotros" data-role="button" data-transition="slideup">Nosotros</a>
-    </div>
-</div>
-    
-<div data-role="page" id="nosotros">
-	<div data-role="header">
-        <h1>Nostros</h1>
-        <a href="#" data-role="button" data-rel="back" class="ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all ui-btn-right " >Atrás</a>
-    </div>
-	<div role="main" class="ui-content">
-        <p style="text-align:justify;">
-            Here is an example of a two "page" site built with two jQuery Mobile divs navigated by linking to an id placed on each page wrapper. Note that the ids on the page wrappers are only needed to support the internal page linking, and are optional if each page is a separate HTML document. Here is what two pages look like inside the body element.
-        </p>
-    </div>    
-</div>
-
-<div data-role="page" id="priv">
-	<div data-role="header">
-        <h1>Privacidad</h1>
-        <a href="#" data-role="button" data-rel="back" class="ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all ui-btn-right " >Atrás</a>
-    </div>
-	<div role="main" class="ui-content">
-        <p style="text-align:justify;">
-            Aviso dirigido a los titulares de datos personales que obran en posesión de Teléfonos de México, S.A.B. de .C.V.:
-
-Teléfonos de México, S.A.B. de C.V. (Telmex), con domicilio en Av. Parque Vía No.190, Colonia Cuauhtémoc, C.P. 06599, en México, Distrito Federal, hace de su conocimiento que los datos personales de usted, incluyendo los sensibles, que actualmente o en el futuro obren en nuestras bases de datos, serán tratados y/o utilizados por: Telmex y/o las empresas controladoras de ésta última y/o nuestras empresas filiales y/o subsidiarias y/o aquellos terceros que, por la naturaleza de sus trabajos o funciones tengan la necesidad de tratar y/o utilizar sus datos personales; con el propósito de cumplir aquellas obligaciones que se derivan de la relación jurídica existente entre usted como titular de los datos personales y las empresas antes señaladas.
-        </p>
-    </div>    
-</div>
-
-<div data-role="page" id="hst">
-	<div data-role="header">
-        <h1>HISTORIAL</h1>
-        <a href="#" data-role="button" data-rel="back" >Atrás</a>
-    </div>
-	<div role="main" class="ui-content">
-    </div>    
-</div>
-    
-<div data-role="page" id="nr1">
-	<div data-role="header"><h1>Resevar</h1></div>
-	<div role="main" class="ui-content">    
-        <ul data-role="listview">
-            <li data-role="list-divider">Tipo de Habitación</li>
-            <li><a href="#">Sencilla</a></li>
-            <li><a href="#">Doble</a></li>
-            <li><a href="#">Familiar</a></li>
-        </ul>
-    </div>
-    <div data-role="footer" data-position="fixed">
-        <div data-role="navbar">
-            <ul>
-                <li><a href="#" class="ui-btn-active">Siguiente</a></li>
-                <li><a href="#" data-rel="back">Cancelar</a></li>
-            </ul>  
+    <head>
+        <meta charset="utf-8">
+        <title>hotelApp</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+        <script src="phonegap.js"></script>
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery.mobile-1.4.5.min.js"></script>
+        <script src="js/actions.js"></script>
+    </head>
+    <body>
+        <div data-role="page" id="home">
+            <div data-role="header">
+                <h1>HotelApp</h1>
+            </div>
+            <div role="main" class="ui-content">
+                <ul data-role="listview" data-inset="true">
+                    <li><a href="#nr1">Nueva Reserva</a></li>
+                    <li><a href="#hist">Historial</a></li>
+                    <li><a href="#priv">Privacidad</a></li>
+                </ul>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <span style="font-size: 8pt;">&copy; Todos los derechos Reservados</span>
+                <a href="#nosotros" data-role="button" data-transition="slideup">Nosotros</a>
+            </div>
         </div>
-    </div>
-</div>
-
-<div data-role="page" id="nr2">
-	<div data-role="header"><h1>Resevar</h1></div>
-	<div role="main" class="ui-content">    
-        <ul data-role="listview">
-            <li data-role="list-divider">Tipo de Habitación</li>
-            <li><a href="#">Datos extras</a></li>
-            <li>
-                Personas:
-                <select id="resP">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
-            </li>
-            <li>
-                Habitaciones:
-                <select id="resH">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
-            </li>
-            <li>
-                Días:
-                <select id="resD">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
-            </li>
-        </ul>
-    </div>
-    <div data-role="footer" data-position="fixed">
-        <div data-role="navbar">
-            <ul>
-                <li><a href="#" class="ui-btn-active">Enviar</a></li>
-                <li><a href="#" data-rel="back">Cancelar</a></li>
-            </ul>  
+        <div data-role="page" id="nosotros">
+            <div data-role="header">
+                <h1>Nosotros</h1>
+                <a href="#" data-role="button" data-rel="back" class="ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all ui-btn-right">Atrás</a>
+            </div>
+            <div role="main" class="ui-content">
+                <p style="text-align: justify;">Here is an example of a two "page" site built with two jQuery Mobile divs navigated by linking to an id placed on each page wrapper. Note that the ids on the page wrappers are only needed to support the internal page linking, and are optional if each page is a separate HTML document. Here is what two pages look like inside the body element.</p>
+            </div>
         </div>
-    </div>
-</div>
-
-    
-</body>
+        <div data-role="page" id="priv">
+            <div data-role="header">
+                <h1>Privacidad</h1>
+                <a href="#" data-role="button" data-rel="back" class="ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all ui-btn-right">Atrás</a>
+            </div>
+            <div role="main" class="ui-content">
+                <p style="text-align: justify;">Here is an example of a two "page" site built with two jQuery Mobile divs navigated by linking to an id placed on each page wrapper. Note that the ids on the page wrappers are only needed to support the internal page linking, and are optional if each page is a separate HTML document. Here is what two pages look like inside the body element.</p>
+            </div>
+        </div>
+        <div data-role="page" id="hist">
+            <div data-role="header">
+                <h1>Historial</h1>
+                <a href="#" data-role="button" data-rel="back">Atrás</a>
+            </div>
+            <div role="main" class="ui-content">
+                
+            </div>
+        </div>
+        <div data-role="page" id="nr1">
+            <div data-role="header"><h1>Reservar</h1></div>
+            <div role="main" class="ui-content">
+                <ul data-role="listview">
+                    <li data-role="list-divider">Tipo de Habitación</li>
+                    <li><a href="#">Sencilla</a></li>
+                    <li><a href="#">Doble</a></li>
+                    <li><a href="#">Familiar</a></li>
+                </ul>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#" class="ui-btn-active">Siguiente</a></li>
+                        <li><a href="#" data-rel="back">Cancelar</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div>
+        </div>
+        <div data-role="page" id="nr2">
+            <div data-role="header"><h1>Reservar</h1></div>
+            <div role="main" class="ui-content">
+                <ul data-role="listview">
+                    <li data-role="list-divider">Datos Extras</li>
+                    <li>
+                        Personas:
+                        <select id="resP">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </li>
+                    <li>
+                        Habitaciones:
+                        <select id="resH">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select> 
+                    </li>
+                    <li>
+                        Días:
+                        <select id="resD">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#" class="ui-btn-active">Enviar</a></li>
+                        <li><a href="#" data-rel="back">Cancelar</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div>
+        </div>
+        
+        <div data-role="page" id="reg">
+            <div data-role="header"><h1>Registro</h1></div>
+            <div role="main" class="ui-content">
+                <ul data-role="listview">
+                    <li data-role="list-divider">Datos Personales</li>
+                    <li>
+                        <input type="text" id="regNom" placeholder="Nombre">
+                    </li>
+                    <li>
+                        <input type="tel" id="regTel" placeholder="Teléfono">
+                    </li>
+                    <li>
+                        <input type="email" id="regMail" placeholder="Correo Electrónico">
+                    </li>
+                    <li><a href="#" id="regFoto">Tomar Foto</a></li>
+                </ul>
+                <div id="viewPhoto"></div>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#" onclick="listo();" class="ui-btn-active" id="regSend">Registra</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div>
+        </div>
+    </body>
 </html>
