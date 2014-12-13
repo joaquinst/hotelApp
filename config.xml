@@ -8,17 +8,19 @@
     <!-- versionCode is optional and Android only -->
     <preference name="phonegap-version" value="3.6.3" />
         
-    <name>hotel App</name>
+    <name>Hotal App</name>
 
     <description>
-        Aplicacion de recervas para hoteles. 
+        Aplicación de reservas para hoteles. 
     </description>
 
-    <author href="https://cenet.mx" email="integradb.mx@gmail.com">
-        Joaquín Sánchez.
+    <author href="http://www.cenet.mx" email="carlos.c@igitsoft.com">
+        Carlos Celma
     </author>
-
+        
     <gap:plugin name="org.apache.cordova.dialogs" />
     <gap:plugin name="org.apache.cordova.media-capture" />
-        
+    <gap:plugin name="org.apache.cordova.file-transfer" />
+    <gap:plugin name="org.apache.cordova.vibration" />
+
 </widget>
