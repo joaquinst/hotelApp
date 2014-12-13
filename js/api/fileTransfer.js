@@ -17,19 +17,20 @@ var fileTransfer = {
     error: function(err){
         navigator.notification.alert('Error: ' + err.code, null, '¡Lo sentimos!','Aceptar');
     },
-    opciones: new FileUploadOptions(),
-    ft: new fileTransfer(),
     subirFoto: function(){
-        fileTransfer.opciones.fileKey = 'foto';
-        fileTransfer.opciones.fileName = 'joaquin';
-        fileTransfer.opciones.mimeType = 'image/jpeg';
+        alert($('#regFoto').attr('rel'));
+        var opciones = new FileUploadOptions();
+        var ft = new FileTransfer();
+        opciones.fileKey = 'foto';
+        opciones.fileName = 'joaquin';
+        opciones.mimeType = 'image/jpeg';
         
-        fileTransfer.ft.upload(
+        ft.upload(
             $('#regFoto').attr('rel'),//URL del Archivo que queremos subir
             'http://carlos.igitsoft.com/apps/test.php',//URL del servidor
             fileTransfer.subido,//Función en caso de que sea satisfactorio
             fileTransfer.error,//Función en caso de error
-            fileTransfer.opciones
+            opciones
         );
     }
 };
