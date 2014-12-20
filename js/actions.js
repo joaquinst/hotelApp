@@ -5,8 +5,7 @@ var fn = {
     init: function(){
         $('#regSend').click(fn.enviarRegistro);
         $('#regFoto').click(capture.imgCapture);
-        var x = false;
-        if(!x)
+        if(!storage.estaRegistrado())
             window.location.href = '#reg';
     },
     enviarRegistro: function(){
@@ -22,7 +21,9 @@ var fn = {
                 data: { nom: nom, mail: mail, tel: tel }
             })
             .done(function( msg ) {
+                alert(1);
                 if(msg == 1){
+                    alert(2);
                     fileTransfer.subirFoto();
                 }
             });
